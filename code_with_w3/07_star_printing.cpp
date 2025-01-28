@@ -47,6 +47,21 @@ void print_triangle_shape2(int row, int col)
     }
 }
 
+void print_triangle_shape3(int row, int col)
+{
+    for (int i = row; i > 0; i--)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            if (j < i)
+            {
+                cout << "*";
+            }
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int row, col;
@@ -58,5 +73,7 @@ int main()
     print_square_shape(row, col);
     print_triangle_shape1(row, col);
     print_triangle_shape2(row, col);
+    cout << endl;
+    print_triangle_shape3(row, col);
     return 0;
 }
